@@ -1997,7 +1997,7 @@ HostIF_CleanupUptime(void)
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 15, 4)
    timer_delete_sync(&uptimeState.timer);
 #else
-   del_timer_sync(&tscTimer);
+   del_timer_sync(&uptimeState.timer);
 #endif
 }
 
